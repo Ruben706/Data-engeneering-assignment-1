@@ -5954,3 +5954,406 @@ drop view if exists "dev"."main"."my_second_dbt_model__dbt_backup" cascade
 [0m11:43:10.255601 [debug] [MainThread]: Command `dbt run` succeeded at 11:43:10.255601 after 1.18 seconds
 [0m11:43:10.255601 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002ACE928C410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002ACE9518E10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002ACE935EAD0>]}
 [0m11:43:10.255601 [debug] [MainThread]: Flushing usage events
+[0m12:04:42.418686 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C87C5BCD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C87CAB2D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C87CAAF50>]}
+
+
+============================== 12:04:42.418686 | d9e39309-c851-4d25-843f-5ba5df668c46 ==============================
+[0m12:04:42.418686 [info ] [MainThread]: Running with dbt=1.7.10
+[0m12:04:42.418686 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\ruben\\.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\ruben\\Documents\\coderen\\fase 3\\data-engeneering\\project OLA 2\\Data-engeneering-assignment-1\\assignment1\\logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m12:04:42.886191 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd9e39309-c851-4d25-843f-5ba5df668c46', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C87CED490>]}
+[0m12:04:42.953167 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd9e39309-c851-4d25-843f-5ba5df668c46', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C87D8CA10>]}
+[0m12:04:42.954037 [info ] [MainThread]: Registered adapter: duckdb=1.7.3
+[0m12:04:42.970117 [debug] [MainThread]: checksum: b88efa780424265bbbd676e971356ada6a7ea9debd0a80a519a6d2707465340d, vars: {}, profile: , target: , version: 1.7.10
+[0m12:04:44.151432 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 3 files changed.
+[0m12:04:44.152436 [debug] [MainThread]: Partial parsing: updated file: assignment1://models\example\schema.yml
+[0m12:04:44.152436 [debug] [MainThread]: Partial parsing: updated file: assignment1://models\example\my_second_dbt_model.sql
+[0m12:04:44.152436 [debug] [MainThread]: Partial parsing: updated file: assignment1://models\example\my_first_dbt_model.sql
+[0m12:04:44.366889 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd9e39309-c851-4d25-843f-5ba5df668c46', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C87D013D0>]}
+[0m12:04:44.368902 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd9e39309-c851-4d25-843f-5ba5df668c46', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C88424550>]}
+[0m12:04:44.368902 [info ] [MainThread]: Found 4 models, 4 tests, 7 sources, 0 exposures, 0 metrics, 391 macros, 0 groups, 0 semantic models
+[0m12:04:44.368902 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd9e39309-c851-4d25-843f-5ba5df668c46', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C87DD3410>]}
+[0m12:04:44.368902 [info ] [MainThread]: 
+[0m12:04:44.368902 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m12:04:44.368902 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev'
+[0m12:04:44.387479 [debug] [ThreadPool]: Using duckdb connection "list_dev"
+[0m12:04:44.387479 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "assignment1", "target_name": "dev", "connection_name": "list_dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"dev"'
+    
+  
+  
+[0m12:04:44.387479 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:04:44.409665 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m12:04:44.410364 [debug] [ThreadPool]: On list_dev: Close
+[0m12:04:44.410364 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now create_dev_main)
+[0m12:04:44.410364 [debug] [ThreadPool]: Creating schema "database: "dev"
+schema: "main"
+"
+[0m12:04:44.420293 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m12:04:44.420293 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "assignment1", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+        select type from duckdb_databases()
+        where database_name='dev'
+        and type='sqlite'
+    
+  
+[0m12:04:44.421292 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:04:44.423152 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m12:04:44.423152 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m12:04:44.423152 [debug] [ThreadPool]: On create_dev_main: BEGIN
+[0m12:04:44.423152 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m12:04:44.423152 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m12:04:44.423152 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "assignment1", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+[0m12:04:44.423152 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m12:04:44.423152 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m12:04:44.423152 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m12:04:44.434840 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m12:04:44.435847 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m12:04:44.436353 [debug] [ThreadPool]: On create_dev_main: Close
+[0m12:04:44.440375 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev_main'
+[0m12:04:44.444373 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m12:04:44.444373 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m12:04:44.445374 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:04:44.451620 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m12:04:44.452633 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m12:04:44.452633 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "assignment1", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main'
+    and table_catalog = 'dev'
+  
+[0m12:04:44.480562 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m12:04:44.484562 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m12:04:44.485583 [debug] [ThreadPool]: Failed to rollback 'list_dev_main'
+[0m12:04:44.485583 [debug] [ThreadPool]: On list_dev_main: Close
+[0m12:04:44.485583 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd9e39309-c851-4d25-843f-5ba5df668c46', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C88054ED0>]}
+[0m12:04:44.485583 [debug] [MainThread]: Using duckdb connection "master"
+[0m12:04:44.485583 [debug] [MainThread]: On master: BEGIN
+[0m12:04:44.485583 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:04:44.485583 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m12:04:44.485583 [debug] [MainThread]: On master: COMMIT
+[0m12:04:44.485583 [debug] [MainThread]: Using duckdb connection "master"
+[0m12:04:44.485583 [debug] [MainThread]: On master: COMMIT
+[0m12:04:44.485583 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m12:04:44.485583 [debug] [MainThread]: On master: Close
+[0m12:04:44.501760 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m12:04:44.503050 [info ] [MainThread]: 
+[0m12:04:44.504462 [debug] [Thread-1 (]: Began running node model.assignment1.edu-res
+[0m12:04:44.504462 [info ] [Thread-1 (]: 1 of 4 START sql external model main.edu-res ................................... [RUN]
+[0m12:04:44.504462 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.assignment1.edu-res'
+[0m12:04:44.504462 [debug] [Thread-1 (]: Began compiling node model.assignment1.edu-res
+[0m12:04:44.504462 [debug] [Thread-1 (]: Writing injected SQL for node "model.assignment1.edu-res"
+[0m12:04:44.504462 [debug] [Thread-1 (]: Timing info for model.assignment1.edu-res (compile): 12:04:44.504462 => 12:04:44.504462
+[0m12:04:44.504462 [debug] [Thread-1 (]: Began executing node model.assignment1.edu-res
+[0m12:04:44.549162 [debug] [Thread-1 (]: Using duckdb connection "model.assignment1.edu-res"
+[0m12:04:44.549162 [debug] [Thread-1 (]: On model.assignment1.edu-res: BEGIN
+[0m12:04:44.550145 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m12:04:44.554689 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m12:04:44.554689 [debug] [Thread-1 (]: Using duckdb connection "model.assignment1.edu-res"
+[0m12:04:44.554689 [debug] [Thread-1 (]: On model.assignment1.edu-res: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "assignment1", "target_name": "dev", "node_id": "model.assignment1.edu-res"} */
+
+  
+    
+    
+
+    create  table
+      "dev"."main"."edu-res__dbt_tmp"
+  
+    as (
+      
+
+
+WITH dim_edu_pass AS(
+SELECT highest_education,
+       SUM(CASE WHEN final_result = 'Pass' THEN 1 ELSE 0 END) AS pass_count,
+       SUM(CASE WHEN final_result = 'Withdrawn' THEN 1 ELSE 0 END) AS withdrawn_count,
+       SUM(CASE WHEN final_result = 'Fail' THEN 1 ELSE 0 END) AS fail_count,
+       SUM(CASE WHEN final_result = 'Distinction' THEN 1 ELSE 0 END) AS distinction_count
+FROM 
+    'data/studentInfo.csv'
+GROUP BY highest_education
+)
+SELECT 
+ *
+from dim_edu_pass
+    );
+  
+  
+[0m12:04:44.623769 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m12:04:44.623769 [debug] [Thread-1 (]: Using duckdb connection "model.assignment1.edu-res"
+[0m12:04:44.623769 [debug] [Thread-1 (]: On model.assignment1.edu-res: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "assignment1", "target_name": "dev", "node_id": "model.assignment1.edu-res"} */
+copy "dev"."main"."edu-res__dbt_tmp" to 'output/edu-res.csv' (format csv, header 1)
+[0m12:04:44.623769 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m12:04:44.623769 [debug] [Thread-1 (]: Writing runtime sql for node "model.assignment1.edu-res"
+[0m12:04:44.634615 [debug] [Thread-1 (]: Using duckdb connection "model.assignment1.edu-res"
+[0m12:04:44.635622 [debug] [Thread-1 (]: On model.assignment1.edu-res: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "assignment1", "target_name": "dev", "node_id": "model.assignment1.edu-res"} */
+create or replace view "dev"."main"."edu-res__dbt_int" as (
+        select * from 'output/edu-res.csv'
+    );
+[0m12:04:44.641639 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m12:04:44.646639 [debug] [Thread-1 (]: Using duckdb connection "model.assignment1.edu-res"
+[0m12:04:44.646639 [debug] [Thread-1 (]: On model.assignment1.edu-res: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "assignment1", "target_name": "dev", "node_id": "model.assignment1.edu-res"} */
+alter view "dev"."main"."edu-res" rename to "edu-res__dbt_backup"
+[0m12:04:44.647621 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m12:04:44.649643 [debug] [Thread-1 (]: Using duckdb connection "model.assignment1.edu-res"
+[0m12:04:44.650639 [debug] [Thread-1 (]: On model.assignment1.edu-res: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "assignment1", "target_name": "dev", "node_id": "model.assignment1.edu-res"} */
+alter view "dev"."main"."edu-res__dbt_int" rename to "edu-res"
+[0m12:04:44.651561 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m12:04:44.661565 [debug] [Thread-1 (]: On model.assignment1.edu-res: COMMIT
+[0m12:04:44.662567 [debug] [Thread-1 (]: Using duckdb connection "model.assignment1.edu-res"
+[0m12:04:44.662567 [debug] [Thread-1 (]: On model.assignment1.edu-res: COMMIT
+[0m12:04:44.665564 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m12:04:44.668697 [debug] [Thread-1 (]: Using duckdb connection "model.assignment1.edu-res"
+[0m12:04:44.668697 [debug] [Thread-1 (]: On model.assignment1.edu-res: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "assignment1", "target_name": "dev", "node_id": "model.assignment1.edu-res"} */
+drop view if exists "dev"."main"."edu-res__dbt_backup" cascade
+[0m12:04:44.668697 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m12:04:44.668697 [debug] [Thread-1 (]: Using duckdb connection "model.assignment1.edu-res"
+[0m12:04:44.668697 [debug] [Thread-1 (]: On model.assignment1.edu-res: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "assignment1", "target_name": "dev", "node_id": "model.assignment1.edu-res"} */
+drop table if exists "dev"."main"."edu-res__dbt_tmp" cascade
+[0m12:04:44.668697 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m12:04:44.668697 [debug] [Thread-1 (]: Timing info for model.assignment1.edu-res (execute): 12:04:44.504462 => 12:04:44.668697
+[0m12:04:44.668697 [debug] [Thread-1 (]: On model.assignment1.edu-res: Close
+[0m12:04:44.684325 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd9e39309-c851-4d25-843f-5ba5df668c46', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C88716ED0>]}
+[0m12:04:44.684325 [info ] [Thread-1 (]: 1 of 4 OK created sql external model main.edu-res .............................. [[32mOK[0m in 0.18s]
+[0m12:04:44.684325 [debug] [Thread-1 (]: Finished running node model.assignment1.edu-res
+[0m12:04:44.684325 [debug] [Thread-1 (]: Began running node model.assignment1.my_first_dbt_model
+[0m12:04:44.684325 [info ] [Thread-1 (]: 2 of 4 START sql table model main.my_first_dbt_model ........................... [RUN]
+[0m12:04:44.684325 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.assignment1.edu-res, now model.assignment1.my_first_dbt_model)
+[0m12:04:44.684325 [debug] [Thread-1 (]: Began compiling node model.assignment1.my_first_dbt_model
+[0m12:04:44.684325 [debug] [Thread-1 (]: Writing injected SQL for node "model.assignment1.my_first_dbt_model"
+[0m12:04:44.684325 [debug] [Thread-1 (]: Timing info for model.assignment1.my_first_dbt_model (compile): 12:04:44.684325 => 12:04:44.684325
+[0m12:04:44.684325 [debug] [Thread-1 (]: Began executing node model.assignment1.my_first_dbt_model
+[0m12:04:44.684325 [debug] [Thread-1 (]: Writing runtime sql for node "model.assignment1.my_first_dbt_model"
+[0m12:04:44.699950 [debug] [Thread-1 (]: Using duckdb connection "model.assignment1.my_first_dbt_model"
+[0m12:04:44.699950 [debug] [Thread-1 (]: On model.assignment1.my_first_dbt_model: BEGIN
+[0m12:04:44.699950 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:04:44.699950 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m12:04:44.699950 [debug] [Thread-1 (]: Using duckdb connection "model.assignment1.my_first_dbt_model"
+[0m12:04:44.699950 [debug] [Thread-1 (]: On model.assignment1.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "assignment1", "target_name": "dev", "node_id": "model.assignment1.my_first_dbt_model"} */
+
+  
+    
+    
+
+    create  table
+      "dev"."main"."my_first_dbt_model__dbt_tmp"
+  
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+  
+[0m12:04:44.699950 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m12:04:44.699950 [debug] [Thread-1 (]: Using duckdb connection "model.assignment1.my_first_dbt_model"
+[0m12:04:44.699950 [debug] [Thread-1 (]: On model.assignment1.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "assignment1", "target_name": "dev", "node_id": "model.assignment1.my_first_dbt_model"} */
+alter table "dev"."main"."my_first_dbt_model" rename to "my_first_dbt_model__dbt_backup"
+[0m12:04:44.715595 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m12:04:44.718965 [debug] [Thread-1 (]: Using duckdb connection "model.assignment1.my_first_dbt_model"
+[0m12:04:44.719941 [debug] [Thread-1 (]: On model.assignment1.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "assignment1", "target_name": "dev", "node_id": "model.assignment1.my_first_dbt_model"} */
+alter table "dev"."main"."my_first_dbt_model__dbt_tmp" rename to "my_first_dbt_model"
+[0m12:04:44.721360 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m12:04:44.721360 [debug] [Thread-1 (]: On model.assignment1.my_first_dbt_model: COMMIT
+[0m12:04:44.721360 [debug] [Thread-1 (]: Using duckdb connection "model.assignment1.my_first_dbt_model"
+[0m12:04:44.721360 [debug] [Thread-1 (]: On model.assignment1.my_first_dbt_model: COMMIT
+[0m12:04:44.721360 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m12:04:44.721360 [debug] [Thread-1 (]: Using duckdb connection "model.assignment1.my_first_dbt_model"
+[0m12:04:44.721360 [debug] [Thread-1 (]: On model.assignment1.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "assignment1", "target_name": "dev", "node_id": "model.assignment1.my_first_dbt_model"} */
+drop table if exists "dev"."main"."my_first_dbt_model__dbt_backup" cascade
+[0m12:04:44.735256 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m12:04:44.735256 [debug] [Thread-1 (]: Timing info for model.assignment1.my_first_dbt_model (execute): 12:04:44.684325 => 12:04:44.735256
+[0m12:04:44.735256 [debug] [Thread-1 (]: On model.assignment1.my_first_dbt_model: Close
+[0m12:04:44.735256 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd9e39309-c851-4d25-843f-5ba5df668c46', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C88A19350>]}
+[0m12:04:44.735256 [info ] [Thread-1 (]: 2 of 4 OK created sql table model main.my_first_dbt_model ...................... [[32mOK[0m in 0.05s]
+[0m12:04:44.750263 [debug] [Thread-1 (]: Finished running node model.assignment1.my_first_dbt_model
+[0m12:04:44.751286 [debug] [Thread-1 (]: Began running node model.assignment1.test
+[0m12:04:44.752303 [info ] [Thread-1 (]: 3 of 4 START sql external model main.test ...................................... [RUN]
+[0m12:04:44.753302 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.assignment1.my_first_dbt_model, now model.assignment1.test)
+[0m12:04:44.754316 [debug] [Thread-1 (]: Began compiling node model.assignment1.test
+[0m12:04:44.757302 [debug] [Thread-1 (]: Writing injected SQL for node "model.assignment1.test"
+[0m12:04:44.758303 [debug] [Thread-1 (]: Timing info for model.assignment1.test (compile): 12:04:44.754316 => 12:04:44.757302
+[0m12:04:44.758303 [debug] [Thread-1 (]: Began executing node model.assignment1.test
+[0m12:04:44.762301 [debug] [Thread-1 (]: Using duckdb connection "model.assignment1.test"
+[0m12:04:44.762301 [debug] [Thread-1 (]: On model.assignment1.test: BEGIN
+[0m12:04:44.763302 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:04:44.778443 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m12:04:44.779463 [debug] [Thread-1 (]: Using duckdb connection "model.assignment1.test"
+[0m12:04:44.779463 [debug] [Thread-1 (]: On model.assignment1.test: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "assignment1", "target_name": "dev", "node_id": "model.assignment1.test"} */
+
+  
+    
+    
+
+    create  table
+      "dev"."main"."test__dbt_tmp"
+  
+    as (
+      
+
+WITH dim_reg_pass AS(
+SELECT 
+    region,
+    SUM(CASE WHEN final_result = 'Pass' THEN 1 ELSE 0 END) AS pass_count,
+    SUM(CASE WHEN final_result = 'Withdrawn' THEN 1 ELSE 0 END) AS withdrawn_count,
+    SUM(CASE WHEN final_result = 'Fail' THEN 1 ELSE 0 END) AS fail_count,
+    SUM(CASE WHEN final_result = 'Distinction' THEN 1 ELSE 0 END) AS distinction_count
+FROM 
+    'data/studentInfo.csv'
+GROUP BY 
+    region
+)
+
+SELECT 
+ *
+from dim_reg_pass
+    );
+  
+  
+[0m12:04:44.835146 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m12:04:44.835146 [debug] [Thread-1 (]: Using duckdb connection "model.assignment1.test"
+[0m12:04:44.835146 [debug] [Thread-1 (]: On model.assignment1.test: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "assignment1", "target_name": "dev", "node_id": "model.assignment1.test"} */
+copy "dev"."main"."test__dbt_tmp" to 'output/test.csv' (format csv, header 1)
+[0m12:04:44.851049 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m12:04:44.851844 [debug] [Thread-1 (]: Writing runtime sql for node "model.assignment1.test"
+[0m12:04:44.851844 [debug] [Thread-1 (]: Using duckdb connection "model.assignment1.test"
+[0m12:04:44.851844 [debug] [Thread-1 (]: On model.assignment1.test: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "assignment1", "target_name": "dev", "node_id": "model.assignment1.test"} */
+create or replace view "dev"."main"."test__dbt_int" as (
+        select * from 'output/test.csv'
+    );
+[0m12:04:44.851844 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m12:04:44.851844 [debug] [Thread-1 (]: Using duckdb connection "model.assignment1.test"
+[0m12:04:44.851844 [debug] [Thread-1 (]: On model.assignment1.test: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "assignment1", "target_name": "dev", "node_id": "model.assignment1.test"} */
+alter view "dev"."main"."test" rename to "test__dbt_backup"
+[0m12:04:44.851844 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m12:04:44.867708 [debug] [Thread-1 (]: Using duckdb connection "model.assignment1.test"
+[0m12:04:44.868703 [debug] [Thread-1 (]: On model.assignment1.test: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "assignment1", "target_name": "dev", "node_id": "model.assignment1.test"} */
+alter view "dev"."main"."test__dbt_int" rename to "test"
+[0m12:04:44.868703 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m12:04:44.868703 [debug] [Thread-1 (]: On model.assignment1.test: COMMIT
+[0m12:04:44.868703 [debug] [Thread-1 (]: Using duckdb connection "model.assignment1.test"
+[0m12:04:44.868703 [debug] [Thread-1 (]: On model.assignment1.test: COMMIT
+[0m12:04:44.868703 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m12:04:44.868703 [debug] [Thread-1 (]: Using duckdb connection "model.assignment1.test"
+[0m12:04:44.868703 [debug] [Thread-1 (]: On model.assignment1.test: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "assignment1", "target_name": "dev", "node_id": "model.assignment1.test"} */
+drop view if exists "dev"."main"."test__dbt_backup" cascade
+[0m12:04:44.868703 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m12:04:44.868703 [debug] [Thread-1 (]: Using duckdb connection "model.assignment1.test"
+[0m12:04:44.868703 [debug] [Thread-1 (]: On model.assignment1.test: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "assignment1", "target_name": "dev", "node_id": "model.assignment1.test"} */
+drop table if exists "dev"."main"."test__dbt_tmp" cascade
+[0m12:04:44.868703 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m12:04:44.884542 [debug] [Thread-1 (]: Timing info for model.assignment1.test (execute): 12:04:44.759303 => 12:04:44.884542
+[0m12:04:44.884542 [debug] [Thread-1 (]: On model.assignment1.test: Close
+[0m12:04:44.886956 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd9e39309-c851-4d25-843f-5ba5df668c46', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C88763950>]}
+[0m12:04:44.886956 [info ] [Thread-1 (]: 3 of 4 OK created sql external model main.test ................................. [[32mOK[0m in 0.13s]
+[0m12:04:44.886956 [debug] [Thread-1 (]: Finished running node model.assignment1.test
+[0m12:04:44.886956 [debug] [Thread-1 (]: Began running node model.assignment1.my_second_dbt_model
+[0m12:04:44.886956 [info ] [Thread-1 (]: 4 of 4 START sql view model main.my_second_dbt_model ........................... [RUN]
+[0m12:04:44.886956 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.assignment1.test, now model.assignment1.my_second_dbt_model)
+[0m12:04:44.886956 [debug] [Thread-1 (]: Began compiling node model.assignment1.my_second_dbt_model
+[0m12:04:44.886956 [debug] [Thread-1 (]: Writing injected SQL for node "model.assignment1.my_second_dbt_model"
+[0m12:04:44.886956 [debug] [Thread-1 (]: Timing info for model.assignment1.my_second_dbt_model (compile): 12:04:44.886956 => 12:04:44.886956
+[0m12:04:44.886956 [debug] [Thread-1 (]: Began executing node model.assignment1.my_second_dbt_model
+[0m12:04:44.910337 [debug] [Thread-1 (]: Writing runtime sql for node "model.assignment1.my_second_dbt_model"
+[0m12:04:44.911335 [debug] [Thread-1 (]: Using duckdb connection "model.assignment1.my_second_dbt_model"
+[0m12:04:44.912228 [debug] [Thread-1 (]: On model.assignment1.my_second_dbt_model: BEGIN
+[0m12:04:44.912228 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:04:44.922456 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m12:04:44.922456 [debug] [Thread-1 (]: Using duckdb connection "model.assignment1.my_second_dbt_model"
+[0m12:04:44.922456 [debug] [Thread-1 (]: On model.assignment1.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "assignment1", "target_name": "dev", "node_id": "model.assignment1.my_second_dbt_model"} */
+
+  
+  create view "dev"."main"."my_second_dbt_model__dbt_tmp" as (
+    -- Use the `ref` function to select from other models
+
+select *
+from "dev"."main"."my_first_dbt_model"
+where id = 1
+  );
+
+[0m12:04:44.922456 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m12:04:44.922456 [debug] [Thread-1 (]: Using duckdb connection "model.assignment1.my_second_dbt_model"
+[0m12:04:44.922456 [debug] [Thread-1 (]: On model.assignment1.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "assignment1", "target_name": "dev", "node_id": "model.assignment1.my_second_dbt_model"} */
+alter view "dev"."main"."my_second_dbt_model" rename to "my_second_dbt_model__dbt_backup"
+[0m12:04:44.922456 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m12:04:44.922456 [debug] [Thread-1 (]: Using duckdb connection "model.assignment1.my_second_dbt_model"
+[0m12:04:44.922456 [debug] [Thread-1 (]: On model.assignment1.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "assignment1", "target_name": "dev", "node_id": "model.assignment1.my_second_dbt_model"} */
+alter view "dev"."main"."my_second_dbt_model__dbt_tmp" rename to "my_second_dbt_model"
+[0m12:04:44.922456 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m12:04:44.934552 [debug] [Thread-1 (]: On model.assignment1.my_second_dbt_model: COMMIT
+[0m12:04:44.935559 [debug] [Thread-1 (]: Using duckdb connection "model.assignment1.my_second_dbt_model"
+[0m12:04:44.935980 [debug] [Thread-1 (]: On model.assignment1.my_second_dbt_model: COMMIT
+[0m12:04:44.935980 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m12:04:44.935980 [debug] [Thread-1 (]: Using duckdb connection "model.assignment1.my_second_dbt_model"
+[0m12:04:44.935980 [debug] [Thread-1 (]: On model.assignment1.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "assignment1", "target_name": "dev", "node_id": "model.assignment1.my_second_dbt_model"} */
+drop view if exists "dev"."main"."my_second_dbt_model__dbt_backup" cascade
+[0m12:04:44.935980 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m12:04:44.935980 [debug] [Thread-1 (]: Timing info for model.assignment1.my_second_dbt_model (execute): 12:04:44.886956 => 12:04:44.935980
+[0m12:04:44.935980 [debug] [Thread-1 (]: On model.assignment1.my_second_dbt_model: Close
+[0m12:04:44.935980 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd9e39309-c851-4d25-843f-5ba5df668c46', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C88A543D0>]}
+[0m12:04:44.935980 [info ] [Thread-1 (]: 4 of 4 OK created sql view model main.my_second_dbt_model ...................... [[32mOK[0m in 0.05s]
+[0m12:04:44.951010 [debug] [Thread-1 (]: Finished running node model.assignment1.my_second_dbt_model
+[0m12:04:44.953123 [debug] [MainThread]: Using duckdb connection "master"
+[0m12:04:44.953123 [debug] [MainThread]: On master: BEGIN
+[0m12:04:44.953123 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m12:04:44.967016 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m12:04:44.967848 [debug] [MainThread]: On master: COMMIT
+[0m12:04:44.967848 [debug] [MainThread]: Using duckdb connection "master"
+[0m12:04:44.967848 [debug] [MainThread]: On master: COMMIT
+[0m12:04:44.968879 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m12:04:44.968879 [debug] [MainThread]: On master: Close
+[0m12:04:44.970936 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:04:44.970936 [debug] [MainThread]: Connection 'create_dev_main' was properly closed.
+[0m12:04:44.971981 [debug] [MainThread]: Connection 'list_dev_main' was properly closed.
+[0m12:04:44.971981 [debug] [MainThread]: Connection 'model.assignment1.my_second_dbt_model' was properly closed.
+[0m12:04:44.972879 [info ] [MainThread]: 
+[0m12:04:44.972879 [info ] [MainThread]: Finished running 2 external models, 1 table model, 1 view model in 0 hours 0 minutes and 0.60 seconds (0.60s).
+[0m12:04:44.974078 [debug] [MainThread]: Command end result
+[0m12:04:45.023311 [info ] [MainThread]: 
+[0m12:04:45.023311 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:04:45.023311 [info ] [MainThread]: 
+[0m12:04:45.023311 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 TOTAL=4
+[0m12:04:45.034396 [debug] [MainThread]: Command `dbt run` succeeded at 12:04:45.034396 after 2.72 seconds
+[0m12:04:45.034396 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C82019C10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C824902D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C8205EB50>]}
+[0m12:04:45.035403 [debug] [MainThread]: Flushing usage events

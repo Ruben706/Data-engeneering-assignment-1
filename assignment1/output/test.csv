@@ -1,14 +1,14 @@
 region,pass_count,withdrawn_count,fail_count,distinction_count
 East Anglian Region,1309,1006,698,327
 Ireland,552,273,261,98
-North Western Region,955,1034,704,213
-Scotland,1359,907,852,328
-South East Region,843,649,375,244
-North Region,691,575,327,230
-South West Region,949,758,465,264
-Yorkshire Region,735,657,449,165
 Wales,765,524,620,177
 London Region,1099,1110,744,263
+South West Region,949,758,465,264
+Yorkshire Region,735,657,449,165
 West Midlands Region,936,913,551,182
 South Region,1287,928,544,333
 East Midlands Region,881,822,462,200
+Scotland,1359,907,852,328
+South East Region,843,649,375,244
+North Region,691,575,327,230
+North Western Region,955,1034,704,213
